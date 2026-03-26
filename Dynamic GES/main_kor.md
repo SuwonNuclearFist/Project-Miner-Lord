@@ -1,3 +1,20 @@
+---
+title: "동태적 일반균형 시스템 (GES)"
+author: "Jinseok Kim"
+format:
+  html:
+    toc: true
+    toc-depth: 4
+    number-sections: true
+    theme: cosmo
+    code-fold: false
+    html-math-method: mathjax
+    self-contained: true
+    smooth-scroll: true
+    embed-resources: true
+editor: visual
+---
+
 # Introduction
 
 - 이 문서는 일반균형 시스템(GES)이 어떻게 작동하는지를 설명한다.
