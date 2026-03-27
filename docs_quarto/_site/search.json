@@ -1,0 +1,44 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Project Miner Lord Design Documents",
+    "section": "",
+    "text": "Project Miner Lord is a medieval macro-management and political-societal simulation.\nThis documentation site is organized around two core systems.\n\nDSMAS\n\nthe economic and social simulation layer\nexplains how goods are produced, supplied, acquired, used, stored, and carried across time\nexplains how seasonality, climate, stock management, and long-run social reproduction shape the realm\n\nPolitics\n\nthe political and institutional layer\nexplains how power is distributed, how administration works, how institutions shape opportunity, and why formal law does not always match actual practice\n\n\nThe goal of this documentation is not only to describe isolated mechanics, but to explain how the game is meant to feel.\nThe player does not manage each household one by one.\nInstead, the player governs provinces, shapes institutions, plans roads, designs zoning layouts, organizes trade connections, sets warehouse priorities, influences local specialization, and observes how those decisions gradually transform the visible world.\n\n\nProject Miner Lord is designed as a game where economic and political change should be visible and interpretable.\nThe player should experience change through:\n\nbuilding appearance\nvisible differences in NPC clothing, equipment, and transport\nchanging trade intensity\nshortage pressure\nestate rise and decline\nzoning and land-value pattern\ndemographic change over time\n\nIn short, this is a game about ruling a realm whose economy, society, and built environment gradually change in visible ways.\n\n\n\n\n\n\n\n\nThe Dynamic Sequential Market Adjustment Simulation (DSMAS) is the background system that governs:\n\nproduction\nsupply\nacquisition\nuse\nstock carry-over\nshortage\nfertility\nnext-generation human capital\noccupational mobility\nproductive investment\n\nIt is designed around sequential adjustment rather than instant perfect balance.\nGo to DSMAS\n\n\n\nThe Politics system is the higher-order structure that governs:\n\ndistribution of power\nadministration\ninstitutions\nlegitimacy\nactual practice versus formal rule\npolitical constraint on economy and society\n\nIt is the main governing layer through which the player shapes the realm.\nGo to Politics\n\n\n\n\nThese two systems are meant to work together.\n\nPolitics determines who can decide, who can enforce, who can access, and who can obstruct.\nDSMAS determines how goods, stock, survival pressure, and long-run social change unfold under those political constraints.\n\nIn other words:\n\nPolitics shapes the rules, permissions, and frictions.\nDSMAS simulates what happens inside that structure over time.\n\n\n\n\nA good reading order is:\n\nDSMAS/index.qmd\nDSMAS/core-system.qmd\nDSMAS/taxonomy.qmd\nDSMAS/procedure.qmd\nDSMAS/stock-and-seasonality.qmd\nPolitics/index.qmd\nPolitics/overview.qmd\nPolitics/distribution-of-power.qmd\nPolitics/administration.qmd\nPolitics/institutions.qmd\nPolitics/legitimacy-and-custom.qmd\n\n\n\n\nThis documentation emphasizes three priorities:\n\ndepth without tedious micromanagement\nreadable cause and effect\nvisible long-run transformation of the realm\n\nThe purpose of the system is not to hide complexity behind spreadsheets.\nThe purpose is to create a world where governance, storage, trade, climate, institutions, and social reproduction all matter in ways the player can actually see."
+  },
+  {
+    "objectID": "index.html#what-kind-of-game-this-is",
+    "href": "index.html#what-kind-of-game-this-is",
+    "title": "Project Miner Lord Design Documents",
+    "section": "",
+    "text": "Project Miner Lord is designed as a game where economic and political change should be visible and interpretable.\nThe player should experience change through:\n\nbuilding appearance\nvisible differences in NPC clothing, equipment, and transport\nchanging trade intensity\nshortage pressure\nestate rise and decline\nzoning and land-value pattern\ndemographic change over time\n\nIn short, this is a game about ruling a realm whose economy, society, and built environment gradually change in visible ways."
+  },
+  {
+    "objectID": "index.html#core-sections",
+    "href": "index.html#core-sections",
+    "title": "Project Miner Lord Design Documents",
+    "section": "",
+    "text": "The Dynamic Sequential Market Adjustment Simulation (DSMAS) is the background system that governs:\n\nproduction\nsupply\nacquisition\nuse\nstock carry-over\nshortage\nfertility\nnext-generation human capital\noccupational mobility\nproductive investment\n\nIt is designed around sequential adjustment rather than instant perfect balance.\nGo to DSMAS\n\n\n\nThe Politics system is the higher-order structure that governs:\n\ndistribution of power\nadministration\ninstitutions\nlegitimacy\nactual practice versus formal rule\npolitical constraint on economy and society\n\nIt is the main governing layer through which the player shapes the realm.\nGo to Politics"
+  },
+  {
+    "objectID": "index.html#how-the-two-systems-connect",
+    "href": "index.html#how-the-two-systems-connect",
+    "title": "Project Miner Lord Design Documents",
+    "section": "",
+    "text": "These two systems are meant to work together.\n\nPolitics determines who can decide, who can enforce, who can access, and who can obstruct.\nDSMAS determines how goods, stock, survival pressure, and long-run social change unfold under those political constraints.\n\nIn other words:\n\nPolitics shapes the rules, permissions, and frictions.\nDSMAS simulates what happens inside that structure over time."
+  },
+  {
+    "objectID": "index.html#reading-order",
+    "href": "index.html#reading-order",
+    "title": "Project Miner Lord Design Documents",
+    "section": "",
+    "text": "A good reading order is:\n\nDSMAS/index.qmd\nDSMAS/core-system.qmd\nDSMAS/taxonomy.qmd\nDSMAS/procedure.qmd\nDSMAS/stock-and-seasonality.qmd\nPolitics/index.qmd\nPolitics/overview.qmd\nPolitics/distribution-of-power.qmd\nPolitics/administration.qmd\nPolitics/institutions.qmd\nPolitics/legitimacy-and-custom.qmd"
+  },
+  {
+    "objectID": "index.html#design-priority",
+    "href": "index.html#design-priority",
+    "title": "Project Miner Lord Design Documents",
+    "section": "",
+    "text": "This documentation emphasizes three priorities:\n\ndepth without tedious micromanagement\nreadable cause and effect\nvisible long-run transformation of the realm\n\nThe purpose of the system is not to hide complexity behind spreadsheets.\nThe purpose is to create a world where governance, storage, trade, climate, institutions, and social reproduction all matter in ways the player can actually see."
+  }
+]
