@@ -1,9 +1,10 @@
 project:
   type: website
-  output-dir: _site
+  output-dir: _s  
 
 website:
   title: "Project Miner Lord Design Docs"
+  site-url: "https://suwonnuclearfist.github.io/Project-Miner-Lord/"
   navbar:
     left:
       - href: index.qmd
