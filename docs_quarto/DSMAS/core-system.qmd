@@ -1,0 +1,88 @@
+---
+title: "Core System"
+format:
+  html:
+    toc: true
+    toc-depth: 2
+---
+
+# Core System
+
+## Sequential Adjustment Rather Than Instant Balance
+
+DSMAS is a sequential market-adjustment simulation. This means the economy does not jump to a single perfect equilibrium in one step. Instead, the world changes through ordered procedures in which production, supply, acquisition, use, and long-run transition occur in sequence.
+
+This structure matters for both realism and gameplay clarity. The player should be able to distinguish whether a problem came from weak production, poor supply allocation, weak stock access, excessive acquisition by some groups, shortage at the point of use, or weak long-run development.
+
+## Design Objective: Depth Without Micromanagement
+
+DSMAS should feel deep, but not tedious. The player should shape the direction of society rather than manually manage every tiny transaction. For this reason, the system uses:
+
+- estate-level aggregation
+- province-level management
+- stock rules instead of constant hand-tuning
+- visible signals instead of hidden complexity
+
+## Visible Social and Economic Change
+
+Economic development should appear in the world itself. A richer province should look different from a poorer one. A winter-stressed province should feel different from a stable one. A commercial province should feel different from a stagnant one.
+
+Social and economic change should be legible through:
+
+- buildings
+- markets
+- trade movement
+- clothing and transport
+- visible estate composition
+- local prosperity or decline
+
+## Main Unit of Analysis
+
+### Province
+
+The Province is the main governable unit. It is the place where the player reads the world, plans infrastructure, organizes storage, sees local shortage, and interprets visible development.
+
+### Estate
+
+The Estate is the main aggregated decision-making unit. DSMAS does not simulate every individual separately. Instead, it works with Social Estates so that the system remains interpretable and computationally manageable.
+
+### Cohort
+
+The Cohort is the main intergenerational unit. Long-run human capital formation and social reproduction are carried through child cohorts and later replacement into adult social structure.
+
+## Endogenous Scope
+
+Most important outcomes in DSMAS are endogenous. Economic outcomes and broader social change emerge from the interaction of production, distribution, acquisition, reserve management, fertility, child investment, mobility, and investment.
+
+The system is meant to determine:
+
+- production
+- supply
+- acquisition
+- use
+- stock carry-over
+- shortage
+- fertility
+- next-generation human capital
+- occupational mobility
+- promotion and demotion
+- productive investment
+
+## What Remains Exogenous
+
+Not everything is endogenous. Some objects remain fixed background structure. These include:
+
+- production parameters
+- preference parameters
+- storability class
+- transport geography
+- baseline institutional rules
+- selected administrative capacity constraints
+- selected environmental constraints
+- climate generation rules
+
+## Relation to the Politics System
+
+Politics is the higher-order constraint structure. DSMAS is the background simulation of exchange, stock management, and social reproduction. Political decisions modify enforcement, allocation, access, security, and adjustment speed.
+
+In that sense, politics does not replace DSMAS. It sits above it and changes how strongly the underlying economic system can function.

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>procedure – Project Miner Lord Design Docs</title>
+<title>Procedure – Project Miner Lord Design Docs</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -114,17 +114,448 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#procedure" id="toc-procedure" class="nav-link active" data-scroll-target="#procedure">Procedure</a>
+  <ul class="collapse">
+  <li><a href="#exchange-clock-procedure" id="toc-exchange-clock-procedure" class="nav-link" data-scroll-target="#exchange-clock-procedure">Exchange Clock Procedure</a>
+  <ul class="collapse">
+  <li><a href="#production-tick" id="toc-production-tick" class="nav-link" data-scroll-target="#production-tick">1. Production Tick</a></li>
+  <li><a href="#supply-tick" id="toc-supply-tick" class="nav-link" data-scroll-target="#supply-tick">2. Supply Tick</a></li>
+  <li><a href="#acquisition-tick" id="toc-acquisition-tick" class="nav-link" data-scroll-target="#acquisition-tick">3. Acquisition Tick</a></li>
+  <li><a href="#use-tick" id="toc-use-tick" class="nav-link" data-scroll-target="#use-tick">4. Use Tick</a></li>
+  <li><a href="#exchange-update-tick" id="toc-exchange-update-tick" class="nav-link" data-scroll-target="#exchange-update-tick">5. Exchange Update Tick</a></li>
+  </ul></li>
+  <li><a href="#estate-clock-procedure" id="toc-estate-clock-procedure" class="nav-link" data-scroll-target="#estate-clock-procedure">Estate Clock Procedure</a>
+  <ul class="collapse">
+  <li><a href="#state-review" id="toc-state-review" class="nav-link" data-scroll-target="#state-review">1. State Review</a></li>
+  <li><a href="#expectation-formation" id="toc-expectation-formation" class="nav-link" data-scroll-target="#expectation-formation">2. Expectation Formation</a></li>
+  <li><a href="#joint-estate-allocation" id="toc-joint-estate-allocation" class="nav-link" data-scroll-target="#joint-estate-allocation">3. Joint Estate Allocation</a></li>
+  <li><a href="#investment-commitment" id="toc-investment-commitment" class="nav-link" data-scroll-target="#investment-commitment">4. Investment Commitment</a></li>
+  <li><a href="#transition-preparation" id="toc-transition-preparation" class="nav-link" data-scroll-target="#transition-preparation">5. Transition Preparation</a></li>
+  </ul></li>
+  <li><a href="#generational-clock-procedure" id="toc-generational-clock-procedure" class="nav-link" data-scroll-target="#generational-clock-procedure">Generational Clock Procedure</a>
+  <ul class="collapse">
+  <li><a href="#child-human-capital-realization" id="toc-child-human-capital-realization" class="nav-link" data-scroll-target="#child-human-capital-realization">1. Child Human Capital Realization</a></li>
+  <li><a href="#cohort-replacement" id="toc-cohort-replacement" class="nav-link" data-scroll-target="#cohort-replacement">2. Cohort Replacement</a></li>
+  <li><a href="#estate-mobility-realization" id="toc-estate-mobility-realization" class="nav-link" data-scroll-target="#estate-mobility-realization">3. Estate Mobility Realization</a></li>
+  <li><a href="#institutional-transmission" id="toc-institutional-transmission" class="nav-link" data-scroll-target="#institutional-transmission">4. Institutional Transmission</a></li>
+  <li><a href="#slow-developmental-update" id="toc-slow-developmental-update" class="nav-link" data-scroll-target="#slow-developmental-update">5. Slow Developmental Update</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Procedure</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
 
 
+</header>
 
+
+<section id="procedure" class="level1">
+<h1>Procedure</h1>
+<p>DSMAS works through ordered procedures. It does not assume that everything happens at once. This is important for both realism and gameplay clarity.</p>
+<p>The full system is divided into three procedural layers:</p>
+<ol type="1">
+<li>Exchange Clock Procedure</li>
+<li>Estate Clock Procedure</li>
+<li>Generational Clock Procedure</li>
+</ol>
+<section id="exchange-clock-procedure" class="level2">
+<h2 class="anchored" data-anchor-id="exchange-clock-procedure">Exchange Clock Procedure</h2>
+<p>The Exchange Clock handles short-run material flow. It turns plans into actual material outcomes.</p>
+<section id="production-tick" class="level3">
+<h3 class="anchored" data-anchor-id="production-tick">1. Production Tick</h3>
+<p>Production Tick is where productive plans become realized output. Production is distinct from movement and distinct from use. Seasonal production matters especially for agriculture.</p>
+<p>Inputs:</p>
+<ul>
+<li>planned production vector</li>
+<li>available labor</li>
+<li>available tangible stock</li>
+<li>productive asset position</li>
+<li>capacity utilization plan</li>
+<li>institutional access</li>
+<li>local disruption</li>
+<li>Seasonal State</li>
+<li>Climate Zone</li>
+</ul>
+<p>Outputs:</p>
+<ul>
+<li>realized production</li>
+<li>used input stock</li>
+<li>unused capacity</li>
+<li>production shortfall</li>
+<li>newly available goods</li>
+</ul>
+</section>
+<section id="supply-tick" class="level3">
+<h3 class="anchored" data-anchor-id="supply-tick">2. Supply Tick</h3>
+<p>Supply Tick determines where newly available goods are placed before final acquisition and use. Goods are divided among local market stock, warehouse reserve, outbound shipment, and protected minimum stock.</p>
+<p>Inputs:</p>
+<ul>
+<li>realized production</li>
+<li>existing stock</li>
+<li>warehouse condition</li>
+<li>planned local supply</li>
+<li>planned outbound supply</li>
+<li>merchant capacity</li>
+<li>route access</li>
+<li>priority rule</li>
+<li>minimum stock rule</li>
+<li>administrative instruction</li>
+</ul>
+<p>Outputs:</p>
+<ul>
+<li>local market stock</li>
+<li>outbound shipment plan</li>
+<li>warehouse reserve assignment</li>
+<li>protected minimum stock</li>
+<li>unallocated goods</li>
+<li>realized outbound delivery</li>
+<li>delivery failure</li>
+<li>route congestion</li>
+</ul>
+</section>
+<section id="acquisition-tick" class="level3">
+<h3 class="anchored" data-anchor-id="acquisition-tick">3. Acquisition Tick</h3>
+<p>Acquisition Tick is where estates attempt to obtain goods that have actually become available. This is not the same as final use. Estates may acquire goods for immediate use, reserve holding, winter preparation, or later household consumption.</p>
+<p>Inputs:</p>
+<ul>
+<li>accessible local market stock</li>
+<li>household stock</li>
+<li>subsistence allocation</li>
+<li>reserve allocation</li>
+<li>target stock</li>
+<li>expected subsistence pressure</li>
+<li>expected winter pressure</li>
+<li>expected availability pressure</li>
+<li>spending capacity</li>
+<li>access constraint</li>
+<li>storage capacity</li>
+</ul>
+<p>Outputs:</p>
+<ul>
+<li>realized acquisition</li>
+<li>household stock inflow</li>
+<li>failed acquisition</li>
+<li>acquisition shortfall</li>
+<li>stock pressure after acquisition</li>
+</ul>
+</section>
+<section id="use-tick" class="level3">
+<h3 class="anchored" data-anchor-id="use-tick">4. Use Tick</h3>
+<p>Use Tick is where estates and local users actually consume or apply goods that are already accessible to them. Goods may be bought now and used later, so acquisition and use must remain distinct.</p>
+<p>Inputs:</p>
+<ul>
+<li>household stock</li>
+<li>realized acquisition</li>
+<li>subsistence need</li>
+<li>discretionary allocation</li>
+<li>Seasonal State</li>
+<li>Climate Zone</li>
+<li>housing pressure</li>
+<li>fuel need</li>
+</ul>
+<p>Outputs:</p>
+<ul>
+<li>realized subsistence use</li>
+<li>realized discretionary use</li>
+<li>fuel use</li>
+<li>housing-service use</li>
+<li>unmet subsistence need</li>
+<li>unmet discretionary need</li>
+<li>post-use stock</li>
+</ul>
+</section>
+<section id="exchange-update-tick" class="level3">
+<h3 class="anchored" data-anchor-id="exchange-update-tick">5. Exchange Update Tick</h3>
+<p>Exchange Update Tick records what happened in the short run and prepares signals for later decisions.</p>
+<p>Inputs:</p>
+<ul>
+<li>realized production</li>
+<li>realized outbound delivery</li>
+<li>realized acquisition</li>
+<li>realized use</li>
+<li>delivery failure</li>
+<li>unmet need</li>
+<li>remaining stock</li>
+<li>unsold stock</li>
+<li>route congestion</li>
+<li>warehouse stress</li>
+</ul>
+<p>Outputs:</p>
+<ul>
+<li>shortage signal</li>
+<li>surplus signal</li>
+<li>delivery instability signal</li>
+<li>exchange success signal</li>
+<li>updated carry-over stock</li>
+<li>signal memory for later expectation formation</li>
+</ul>
+</section>
+</section>
+<section id="estate-clock-procedure" class="level2">
+<h2 class="anchored" data-anchor-id="estate-clock-procedure">Estate Clock Procedure</h2>
+<p>The Estate Clock handles estate-level planning and social allocation.</p>
+<section id="state-review" class="level3">
+<h3 class="anchored" data-anchor-id="state-review">1. State Review</h3>
+<p>Estates first review recent conditions so that decision-making is grounded in experienced reality.</p>
+<p>Inputs:</p>
+<ul>
+<li>shortage memory</li>
+<li>delivery success memory</li>
+<li>stock pressure</li>
+<li>household stock</li>
+<li>known route access</li>
+<li>estate spending capacity</li>
+<li>local security</li>
+<li>administrative reliability</li>
+<li>Seasonal State</li>
+<li>Climate Zone</li>
+</ul>
+<p>Output:</p>
+<ul>
+<li>estate decision-state summary</li>
+</ul>
+</section>
+<section id="expectation-formation" class="level3">
+<h3 class="anchored" data-anchor-id="expectation-formation">2. Expectation Formation</h3>
+<p>Expectation Formation generates simple forecasts based on recent local experience and known access. It is not perfect foresight. It is a practical estimate.</p>
+<p>Inputs:</p>
+<ul>
+<li>lagged shortage frequency</li>
+<li>lagged delivery success</li>
+<li>lagged stock pressure</li>
+<li>known route access</li>
+<li>transport reliability</li>
+<li>administrative reliability</li>
+<li>estate spending pressure</li>
+<li>recent social stress</li>
+<li>Seasonal State</li>
+<li>Climate Zone</li>
+<li>time until next major replenishment</li>
+</ul>
+<p>Outputs:</p>
+<ul>
+<li>expected production viability</li>
+<li>expected trade opportunity</li>
+<li>expected subsistence pressure</li>
+<li>expected availability pressure</li>
+<li>expected winter pressure</li>
+<li>expected child-investment return</li>
+<li>expected mobility opportunity</li>
+<li>target stock</li>
+</ul>
+</section>
+<section id="joint-estate-allocation" class="level3">
+<h3 class="anchored" data-anchor-id="joint-estate-allocation">3. Joint Estate Allocation</h3>
+<p>Consumption, fertility, child investment, reserve building, and productive investment should be treated as one broad allocation problem.</p>
+<p>The conceptual resource identity is</p>
+<p>[ Y_t^{e} = C_t^{subs,e} + C_t^{disc,e} + F_t^{e} + I_t^{child,e} + I_t^{prod,e} + R_t^{e} ]</p>
+<p>where:</p>
+<ul>
+<li>(C_t^{subs,e}): subsistence allocation</li>
+<li>(C_t^{disc,e}): discretionary allocation</li>
+<li>(F_t^{e}): fertility-related expenditure</li>
+<li>(I_t^{child,e}): next-generation human capital investment</li>
+<li>(I_t^{prod,e}): productive investment</li>
+<li>(R_t^{e}): reserve allocation</li>
+</ul>
+<p>Inputs:</p>
+<ul>
+<li>estate spending capacity</li>
+<li>expected subsistence pressure</li>
+<li>expected availability pressure</li>
+<li>expected winter pressure</li>
+<li>expected child-investment return</li>
+<li>expected mobility opportunity</li>
+<li>institutional constraint</li>
+<li>demographic composition</li>
+<li>storage capacity</li>
+<li>working-capital pressure</li>
+</ul>
+<p>Outputs:</p>
+<ul>
+<li>subsistence allocation</li>
+<li>discretionary allocation</li>
+<li>fertility allocation</li>
+<li>child investment allocation</li>
+<li>productive investment allocation</li>
+<li>reserve allocation</li>
+</ul>
+</section>
+<section id="investment-commitment" class="level3">
+<h3 class="anchored" data-anchor-id="investment-commitment">4. Investment Commitment</h3>
+<p>Estates decide whether to commit resources to future production, building, capacity growth, or local improvement. The commitment is immediate, but realization is delayed.</p>
+<p>Inputs:</p>
+<ul>
+<li>productive investment allocation</li>
+<li>expected production viability</li>
+<li>road condition</li>
+<li>construction constraint</li>
+<li>institutional permission</li>
+<li>security condition</li>
+<li>local specialization profile</li>
+<li>working-capital pressure</li>
+</ul>
+<p>Outputs:</p>
+<ul>
+<li>committed productive project</li>
+<li>committed capital expansion</li>
+<li>committed construction demand</li>
+<li>future capacity pipeline</li>
+</ul>
+</section>
+<section id="transition-preparation" class="level3">
+<h3 class="anchored" data-anchor-id="transition-preparation">5. Transition Preparation</h3>
+<p>Some choices prepare long-run transformation without changing society instantly.</p>
+<p>Inputs:</p>
+<ul>
+<li>fertility allocation</li>
+<li>child investment allocation</li>
+<li>child cohort structure</li>
+<li>institutional access</li>
+<li>estate barrier</li>
+<li>estate privilege</li>
+</ul>
+<p>Outputs:</p>
+<ul>
+<li>next-generation human capital pipeline</li>
+<li>future cohort quality indicator</li>
+<li>future mobility eligibility indicator</li>
+<li>demographic transition queue</li>
+</ul>
+</section>
+</section>
+<section id="generational-clock-procedure" class="level2">
+<h2 class="anchored" data-anchor-id="generational-clock-procedure">Generational Clock Procedure</h2>
+<p>The Generational Clock handles slow social transformation.</p>
+<section id="child-human-capital-realization" class="level3">
+<h3 class="anchored" data-anchor-id="child-human-capital-realization">1. Child Human Capital Realization</h3>
+<p>Long-run human capital formation is modeled mainly through children.</p>
+<p>A conceptual form is</p>
+<p>[ h_{t+1}^{child,e} = H(, s_t, a_t, _t) ]</p>
+<p>where:</p>
+<ul>
+<li>(n_t^{e}): child cohort size</li>
+<li>(s_t): subsistence and health condition</li>
+<li>(a_t): access condition</li>
+<li>(_t): institutional inclusion</li>
+</ul>
+<p>Inputs:</p>
+<ul>
+<li>accumulated child investment</li>
+<li>child cohort size</li>
+<li>nutrition condition</li>
+<li>living-standard condition</li>
+<li>institutional access</li>
+<li>estate barrier</li>
+<li>local stability</li>
+</ul>
+<p>Output:</p>
+<ul>
+<li>realized child human capital</li>
+</ul>
+</section>
+<section id="cohort-replacement" class="level3">
+<h3 class="anchored" data-anchor-id="cohort-replacement">2. Cohort Replacement</h3>
+<p>Children later become the next adult layer of society.</p>
+<p>Inputs:</p>
+<ul>
+<li>realized child human capital</li>
+<li>cohort transition queue</li>
+<li>estate entry rule</li>
+<li>institutional access</li>
+<li>local opportunity structure</li>
+</ul>
+<p>Outputs:</p>
+<ul>
+<li>new adult cohort entry</li>
+<li>updated estate composition</li>
+<li>replacement pressure by estate</li>
+</ul>
+</section>
+<section id="estate-mobility-realization" class="level3">
+<h3 class="anchored" data-anchor-id="estate-mobility-realization">3. Estate Mobility Realization</h3>
+<p>Long-run mobility should not be decided instantly in one short-run window.</p>
+<p>Inputs:</p>
+<ul>
+<li>mobility eligibility indicator</li>
+<li>new cohort quality</li>
+<li>estate barrier</li>
+<li>estate privilege</li>
+<li>institutional openness</li>
+<li>local demand for roles</li>
+</ul>
+<p>Outputs:</p>
+<ul>
+<li>promotion realization</li>
+<li>demotion realization</li>
+<li>occupational transition realization</li>
+<li>updated mobility history</li>
+</ul>
+</section>
+<section id="institutional-transmission" class="level3">
+<h3 class="anchored" data-anchor-id="institutional-transmission">4. Institutional Transmission</h3>
+<p>Institutions matter most when they shape repeated access across generations.</p>
+<p>Inputs:</p>
+<ul>
+<li>institutional reach</li>
+<li>administrative continuity</li>
+<li>educational access</li>
+<li>political inclusion</li>
+<li>security stability</li>
+</ul>
+<p>Outputs:</p>
+<ul>
+<li>updated institutional access profile</li>
+<li>updated inclusion pattern</li>
+<li>updated long-run barrier structure</li>
+</ul>
+</section>
+<section id="slow-developmental-update" class="level3">
+<h3 class="anchored" data-anchor-id="slow-developmental-update">5. Slow Developmental Update</h3>
+<p>Long-run development should emerge from repeated accumulated change.</p>
+<p>Inputs:</p>
+<ul>
+<li>updated estate composition</li>
+<li>updated human capital profile</li>
+<li>durable capital stock</li>
+<li>road quality</li>
+<li>trade-network depth</li>
+<li>institutional reach</li>
+<li>provincial stress history</li>
+</ul>
+<p>Outputs:</p>
+<ul>
+<li>updated long-run provincial development</li>
+<li>updated specialization profile</li>
+<li>updated long-run social structure</li>
+</ul>
+
+
+</section>
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

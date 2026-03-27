@@ -1,0 +1,182 @@
+---
+title: "Taxonomy"
+html:
+    toc: true
+    toc-depth: 2
+---
+
+# Taxonomy
+
+## Time Structure
+
+DSMAS does not use one single time step for everything. Different parts of the world move at different speeds. Goods can be produced, moved, acquired, and used relatively quickly. Estate-level planning changes more slowly. Child development, cohort replacement, and long-run social transformation change more slowly still.
+
+To keep the system intuitive and computationally manageable, time is divided into three layers:
+
+1. Exchange Clock
+2. Estate Clock
+3. Generational Clock
+
+In addition, the world has a continuously changing Seasonal State and Climate Context. These are not separate full clocks. They are environmental conditions that modify demand, production opportunity, access pressure, and stock targets.
+
+## Exchange Clock
+
+The Exchange Clock handles short-run material movement and local adjustment. It is the fastest layer in DSMAS. This is where goods are produced, allocated, shipped, acquired, used, and carried over.
+
+Its five components are:
+
+1. Production Tick
+2. Supply Tick
+3. Acquisition Tick
+4. Use Tick
+5. Exchange Update Tick
+
+## Estate Clock
+
+The Estate Clock handles estate-level planning and social allocation. It is slower than the Exchange Clock. This is the layer where estates review recent conditions, form expectations, allocate resources, commit investment, and prepare long-run transition.
+
+Its five components are:
+
+1. State Review
+2. Expectation Formation
+3. Joint Estate Allocation
+4. Investment Commitment
+5. Transition Preparation
+
+## Generational Clock
+
+The Generational Clock handles the slowest form of change. It governs intergenerational development and long-run social transformation.
+
+Its five components are:
+
+1. Child Human Capital Realization
+2. Cohort Replacement
+3. Estate Mobility Realization
+4. Institutional Transmission
+5. Slow Developmental Update
+
+## Seasonal and Climate Context
+
+Each province has a Climate Zone and a current Seasonal State. These affect both production and use. In particular, they affect:
+
+- subsistence need
+- fuel need
+- housing pressure
+- agricultural opportunity
+- target stock
+- winter vulnerability
+
+The basic design principle is that production can be seasonal, demand can also be seasonal, and stock exists because time is uneven.
+
+## Geographic Unit
+
+The set of geographic units is
+
+\[
+G = \{p, r, s, c\}
+\]
+
+where:
+
+- \(p\): Province
+- \(r\): Region
+- \(s\): Subcontinent
+- \(c\): Continent
+
+The belonging location of an estate or population block can be written as
+
+\[
+G_0 = \{p_0, r_0, s_0, c_0\}
+\]
+
+In gameplay terms, the Province is the most important unit.
+
+## Social Estate
+
+Population is not mainly simulated one individual at a time. Instead, decision-making is aggregated by Social Estate, denoted by \(e\).
+
+The main estates are:
+
+0. The Destitute
+1. The Commoners
+2. The Artisans
+3. The Merchants
+4. The Clergy
+5. The Soldiers
+6. The Virtuosos
+7. The Nomads
+
+This aggregation is used because it is more intuitive for the player, easier to connect to politics and institutions, and far cheaper to compute than full agent-level simulation.
+
+## State Variable Classes
+
+### Fast-Moving State Variables
+
+These are mainly updated through the Exchange Clock:
+
+- local stock
+- market stock
+- household stock
+- merchant allocation
+- realized delivery
+- realized acquisition
+- realized use
+- shortage
+- unsold stock
+- route disruption
+- warehouse stress
+
+### Medium-Moving State Variables
+
+These are mainly updated through the Estate Clock:
+
+- estate spending capacity
+- subsistence pressure
+- fertility pressure
+- child investment allocation
+- production plan
+- supply plan
+- reserve allocation
+- productive investment commitment
+- local administrative performance
+- target stock
+- priority rule
+
+### Slow-Moving State Variables
+
+These are mainly updated through the Generational Clock:
+
+- next-generation human capital
+- estate composition
+- durable capital stock
+- road quality
+- trade-network depth
+- institutional reach
+- long-run provincial development
+- cohort transition structure
+
+## Resource Taxonomy
+
+### Tangible Goods
+
+Tangible goods can be stored and carried over. Typical examples include:
+
+- food
+- fuel
+- material inputs
+- construction goods
+- household durables
+- trade goods
+- warm clothing
+
+### Non-Tangible Goods
+
+Non-tangible goods cannot be stored in the same way and are used within the relevant decision window. Typical examples include:
+
+- education access
+- artistic service
+- administrative service
+- religious service
+- prestige consumption
+- protection-related service
+- housing service

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>core-system – Project Miner Lord Design Docs</title>
+<title>Core System – Project Miner Lord Design Docs</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -114,17 +114,131 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul class="collapse">
+  <li><a href="#core-system" id="toc-core-system" class="nav-link active" data-scroll-target="#core-system">Core System</a>
+  <ul class="collapse">
+  <li><a href="#sequential-adjustment-rather-than-instant-balance" id="toc-sequential-adjustment-rather-than-instant-balance" class="nav-link" data-scroll-target="#sequential-adjustment-rather-than-instant-balance">Sequential Adjustment Rather Than Instant Balance</a></li>
+  <li><a href="#design-objective-depth-without-micromanagement" id="toc-design-objective-depth-without-micromanagement" class="nav-link" data-scroll-target="#design-objective-depth-without-micromanagement">Design Objective: Depth Without Micromanagement</a></li>
+  <li><a href="#visible-social-and-economic-change" id="toc-visible-social-and-economic-change" class="nav-link" data-scroll-target="#visible-social-and-economic-change">Visible Social and Economic Change</a></li>
+  <li><a href="#main-unit-of-analysis" id="toc-main-unit-of-analysis" class="nav-link" data-scroll-target="#main-unit-of-analysis">Main Unit of Analysis</a></li>
+  <li><a href="#endogenous-scope" id="toc-endogenous-scope" class="nav-link" data-scroll-target="#endogenous-scope">Endogenous Scope</a></li>
+  <li><a href="#what-remains-exogenous" id="toc-what-remains-exogenous" class="nav-link" data-scroll-target="#what-remains-exogenous">What Remains Exogenous</a></li>
+  <li><a href="#relation-to-the-politics-system" id="toc-relation-to-the-politics-system" class="nav-link" data-scroll-target="#relation-to-the-politics-system">Relation to the Politics System</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Core System</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
 
 
+</header>
 
+
+<section id="core-system" class="level1">
+<h1>Core System</h1>
+<section id="sequential-adjustment-rather-than-instant-balance" class="level2">
+<h2 class="anchored" data-anchor-id="sequential-adjustment-rather-than-instant-balance">Sequential Adjustment Rather Than Instant Balance</h2>
+<p>DSMAS is a sequential market-adjustment simulation. This means the economy does not jump to a single perfect equilibrium in one step. Instead, the world changes through ordered procedures in which production, supply, acquisition, use, and long-run transition occur in sequence.</p>
+<p>This structure matters for both realism and gameplay clarity. The player should be able to distinguish whether a problem came from weak production, poor supply allocation, weak stock access, excessive acquisition by some groups, shortage at the point of use, or weak long-run development.</p>
+</section>
+<section id="design-objective-depth-without-micromanagement" class="level2">
+<h2 class="anchored" data-anchor-id="design-objective-depth-without-micromanagement">Design Objective: Depth Without Micromanagement</h2>
+<p>DSMAS should feel deep, but not tedious. The player should shape the direction of society rather than manually manage every tiny transaction. For this reason, the system uses:</p>
+<ul>
+<li>estate-level aggregation</li>
+<li>province-level management</li>
+<li>stock rules instead of constant hand-tuning</li>
+<li>visible signals instead of hidden complexity</li>
+</ul>
+</section>
+<section id="visible-social-and-economic-change" class="level2">
+<h2 class="anchored" data-anchor-id="visible-social-and-economic-change">Visible Social and Economic Change</h2>
+<p>Economic development should appear in the world itself. A richer province should look different from a poorer one. A winter-stressed province should feel different from a stable one. A commercial province should feel different from a stagnant one.</p>
+<p>Social and economic change should be legible through:</p>
+<ul>
+<li>buildings</li>
+<li>markets</li>
+<li>trade movement</li>
+<li>clothing and transport</li>
+<li>visible estate composition</li>
+<li>local prosperity or decline</li>
+</ul>
+</section>
+<section id="main-unit-of-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="main-unit-of-analysis">Main Unit of Analysis</h2>
+<section id="province" class="level3">
+<h3 class="anchored" data-anchor-id="province">Province</h3>
+<p>The Province is the main governable unit. It is the place where the player reads the world, plans infrastructure, organizes storage, sees local shortage, and interprets visible development.</p>
+</section>
+<section id="estate" class="level3">
+<h3 class="anchored" data-anchor-id="estate">Estate</h3>
+<p>The Estate is the main aggregated decision-making unit. DSMAS does not simulate every individual separately. Instead, it works with Social Estates so that the system remains interpretable and computationally manageable.</p>
+</section>
+<section id="cohort" class="level3">
+<h3 class="anchored" data-anchor-id="cohort">Cohort</h3>
+<p>The Cohort is the main intergenerational unit. Long-run human capital formation and social reproduction are carried through child cohorts and later replacement into adult social structure.</p>
+</section>
+</section>
+<section id="endogenous-scope" class="level2">
+<h2 class="anchored" data-anchor-id="endogenous-scope">Endogenous Scope</h2>
+<p>Most important outcomes in DSMAS are endogenous. Economic outcomes and broader social change emerge from the interaction of production, distribution, acquisition, reserve management, fertility, child investment, mobility, and investment.</p>
+<p>The system is meant to determine:</p>
+<ul>
+<li>production</li>
+<li>supply</li>
+<li>acquisition</li>
+<li>use</li>
+<li>stock carry-over</li>
+<li>shortage</li>
+<li>fertility</li>
+<li>next-generation human capital</li>
+<li>occupational mobility</li>
+<li>promotion and demotion</li>
+<li>productive investment</li>
+</ul>
+</section>
+<section id="what-remains-exogenous" class="level2">
+<h2 class="anchored" data-anchor-id="what-remains-exogenous">What Remains Exogenous</h2>
+<p>Not everything is endogenous. Some objects remain fixed background structure. These include:</p>
+<ul>
+<li>production parameters</li>
+<li>preference parameters</li>
+<li>storability class</li>
+<li>transport geography</li>
+<li>baseline institutional rules</li>
+<li>selected administrative capacity constraints</li>
+<li>selected environmental constraints</li>
+<li>climate generation rules</li>
+</ul>
+</section>
+<section id="relation-to-the-politics-system" class="level2">
+<h2 class="anchored" data-anchor-id="relation-to-the-politics-system">Relation to the Politics System</h2>
+<p>Politics is the higher-order constraint structure. DSMAS is the background simulation of exchange, stock management, and social reproduction. Political decisions modify enforcement, allocation, access, security, and adjustment speed.</p>
+<p>In that sense, politics does not replace DSMAS. It sits above it and changes how strongly the underlying economic system can function.</p>
+
+
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

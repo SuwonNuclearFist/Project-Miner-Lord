@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>taxonomy – Project Miner Lord Design Docs</title>
+<title>Taxonomy – Project Miner Lord Design Docs</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -114,17 +114,233 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#taxonomy" id="toc-taxonomy" class="nav-link active" data-scroll-target="#taxonomy">Taxonomy</a>
+  <ul class="collapse">
+  <li><a href="#time-structure" id="toc-time-structure" class="nav-link" data-scroll-target="#time-structure">Time Structure</a></li>
+  <li><a href="#exchange-clock" id="toc-exchange-clock" class="nav-link" data-scroll-target="#exchange-clock">Exchange Clock</a></li>
+  <li><a href="#estate-clock" id="toc-estate-clock" class="nav-link" data-scroll-target="#estate-clock">Estate Clock</a></li>
+  <li><a href="#generational-clock" id="toc-generational-clock" class="nav-link" data-scroll-target="#generational-clock">Generational Clock</a></li>
+  <li><a href="#seasonal-and-climate-context" id="toc-seasonal-and-climate-context" class="nav-link" data-scroll-target="#seasonal-and-climate-context">Seasonal and Climate Context</a></li>
+  <li><a href="#geographic-unit" id="toc-geographic-unit" class="nav-link" data-scroll-target="#geographic-unit">Geographic Unit</a></li>
+  <li><a href="#social-estate" id="toc-social-estate" class="nav-link" data-scroll-target="#social-estate">Social Estate</a></li>
+  <li><a href="#state-variable-classes" id="toc-state-variable-classes" class="nav-link" data-scroll-target="#state-variable-classes">State Variable Classes</a>
+  <ul class="collapse">
+  <li><a href="#fast-moving-state-variables" id="toc-fast-moving-state-variables" class="nav-link" data-scroll-target="#fast-moving-state-variables">Fast-Moving State Variables</a></li>
+  <li><a href="#medium-moving-state-variables" id="toc-medium-moving-state-variables" class="nav-link" data-scroll-target="#medium-moving-state-variables">Medium-Moving State Variables</a></li>
+  <li><a href="#slow-moving-state-variables" id="toc-slow-moving-state-variables" class="nav-link" data-scroll-target="#slow-moving-state-variables">Slow-Moving State Variables</a></li>
+  </ul></li>
+  <li><a href="#resource-taxonomy" id="toc-resource-taxonomy" class="nav-link" data-scroll-target="#resource-taxonomy">Resource Taxonomy</a>
+  <ul class="collapse">
+  <li><a href="#tangible-goods" id="toc-tangible-goods" class="nav-link" data-scroll-target="#tangible-goods">Tangible Goods</a></li>
+  <li><a href="#non-tangible-goods" id="toc-non-tangible-goods" class="nav-link" data-scroll-target="#non-tangible-goods">Non-Tangible Goods</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Taxonomy</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
 
 
+</header>
 
+
+<section id="taxonomy" class="level1">
+<h1>Taxonomy</h1>
+<section id="time-structure" class="level2">
+<h2 class="anchored" data-anchor-id="time-structure">Time Structure</h2>
+<p>DSMAS does not use one single time step for everything. Different parts of the world move at different speeds. Goods can be produced, moved, acquired, and used relatively quickly. Estate-level planning changes more slowly. Child development, cohort replacement, and long-run social transformation change more slowly still.</p>
+<p>To keep the system intuitive and computationally manageable, time is divided into three layers:</p>
+<ol type="1">
+<li>Exchange Clock</li>
+<li>Estate Clock</li>
+<li>Generational Clock</li>
+</ol>
+<p>In addition, the world has a continuously changing Seasonal State and Climate Context. These are not separate full clocks. They are environmental conditions that modify demand, production opportunity, access pressure, and stock targets.</p>
+</section>
+<section id="exchange-clock" class="level2">
+<h2 class="anchored" data-anchor-id="exchange-clock">Exchange Clock</h2>
+<p>The Exchange Clock handles short-run material movement and local adjustment. It is the fastest layer in DSMAS. This is where goods are produced, allocated, shipped, acquired, used, and carried over.</p>
+<p>Its five components are:</p>
+<ol type="1">
+<li>Production Tick</li>
+<li>Supply Tick</li>
+<li>Acquisition Tick</li>
+<li>Use Tick</li>
+<li>Exchange Update Tick</li>
+</ol>
+</section>
+<section id="estate-clock" class="level2">
+<h2 class="anchored" data-anchor-id="estate-clock">Estate Clock</h2>
+<p>The Estate Clock handles estate-level planning and social allocation. It is slower than the Exchange Clock. This is the layer where estates review recent conditions, form expectations, allocate resources, commit investment, and prepare long-run transition.</p>
+<p>Its five components are:</p>
+<ol type="1">
+<li>State Review</li>
+<li>Expectation Formation</li>
+<li>Joint Estate Allocation</li>
+<li>Investment Commitment</li>
+<li>Transition Preparation</li>
+</ol>
+</section>
+<section id="generational-clock" class="level2">
+<h2 class="anchored" data-anchor-id="generational-clock">Generational Clock</h2>
+<p>The Generational Clock handles the slowest form of change. It governs intergenerational development and long-run social transformation.</p>
+<p>Its five components are:</p>
+<ol type="1">
+<li>Child Human Capital Realization</li>
+<li>Cohort Replacement</li>
+<li>Estate Mobility Realization</li>
+<li>Institutional Transmission</li>
+<li>Slow Developmental Update</li>
+</ol>
+</section>
+<section id="seasonal-and-climate-context" class="level2">
+<h2 class="anchored" data-anchor-id="seasonal-and-climate-context">Seasonal and Climate Context</h2>
+<p>Each province has a Climate Zone and a current Seasonal State. These affect both production and use. In particular, they affect:</p>
+<ul>
+<li>subsistence need</li>
+<li>fuel need</li>
+<li>housing pressure</li>
+<li>agricultural opportunity</li>
+<li>target stock</li>
+<li>winter vulnerability</li>
+</ul>
+<p>The basic design principle is that production can be seasonal, demand can also be seasonal, and stock exists because time is uneven.</p>
+</section>
+<section id="geographic-unit" class="level2">
+<h2 class="anchored" data-anchor-id="geographic-unit">Geographic Unit</h2>
+<p>The set of geographic units is</p>
+<p>[ G = {p, r, s, c} ]</p>
+<p>where:</p>
+<ul>
+<li>(p): Province</li>
+<li>(r): Region</li>
+<li>(s): Subcontinent</li>
+<li>(c): Continent</li>
+</ul>
+<p>The belonging location of an estate or population block can be written as</p>
+<p>[ G_0 = {p_0, r_0, s_0, c_0} ]</p>
+<p>In gameplay terms, the Province is the most important unit.</p>
+</section>
+<section id="social-estate" class="level2">
+<h2 class="anchored" data-anchor-id="social-estate">Social Estate</h2>
+<p>Population is not mainly simulated one individual at a time. Instead, decision-making is aggregated by Social Estate, denoted by (e).</p>
+<p>The main estates are:</p>
+<ol start="0" type="1">
+<li>The Destitute</li>
+<li>The Commoners</li>
+<li>The Artisans</li>
+<li>The Merchants</li>
+<li>The Clergy</li>
+<li>The Soldiers</li>
+<li>The Virtuosos</li>
+<li>The Nomads</li>
+</ol>
+<p>This aggregation is used because it is more intuitive for the player, easier to connect to politics and institutions, and far cheaper to compute than full agent-level simulation.</p>
+</section>
+<section id="state-variable-classes" class="level2">
+<h2 class="anchored" data-anchor-id="state-variable-classes">State Variable Classes</h2>
+<section id="fast-moving-state-variables" class="level3">
+<h3 class="anchored" data-anchor-id="fast-moving-state-variables">Fast-Moving State Variables</h3>
+<p>These are mainly updated through the Exchange Clock:</p>
+<ul>
+<li>local stock</li>
+<li>market stock</li>
+<li>household stock</li>
+<li>merchant allocation</li>
+<li>realized delivery</li>
+<li>realized acquisition</li>
+<li>realized use</li>
+<li>shortage</li>
+<li>unsold stock</li>
+<li>route disruption</li>
+<li>warehouse stress</li>
+</ul>
+</section>
+<section id="medium-moving-state-variables" class="level3">
+<h3 class="anchored" data-anchor-id="medium-moving-state-variables">Medium-Moving State Variables</h3>
+<p>These are mainly updated through the Estate Clock:</p>
+<ul>
+<li>estate spending capacity</li>
+<li>subsistence pressure</li>
+<li>fertility pressure</li>
+<li>child investment allocation</li>
+<li>production plan</li>
+<li>supply plan</li>
+<li>reserve allocation</li>
+<li>productive investment commitment</li>
+<li>local administrative performance</li>
+<li>target stock</li>
+<li>priority rule</li>
+</ul>
+</section>
+<section id="slow-moving-state-variables" class="level3">
+<h3 class="anchored" data-anchor-id="slow-moving-state-variables">Slow-Moving State Variables</h3>
+<p>These are mainly updated through the Generational Clock:</p>
+<ul>
+<li>next-generation human capital</li>
+<li>estate composition</li>
+<li>durable capital stock</li>
+<li>road quality</li>
+<li>trade-network depth</li>
+<li>institutional reach</li>
+<li>long-run provincial development</li>
+<li>cohort transition structure</li>
+</ul>
+</section>
+</section>
+<section id="resource-taxonomy" class="level2">
+<h2 class="anchored" data-anchor-id="resource-taxonomy">Resource Taxonomy</h2>
+<section id="tangible-goods" class="level3">
+<h3 class="anchored" data-anchor-id="tangible-goods">Tangible Goods</h3>
+<p>Tangible goods can be stored and carried over. Typical examples include:</p>
+<ul>
+<li>food</li>
+<li>fuel</li>
+<li>material inputs</li>
+<li>construction goods</li>
+<li>household durables</li>
+<li>trade goods</li>
+<li>warm clothing</li>
+</ul>
+</section>
+<section id="non-tangible-goods" class="level3">
+<h3 class="anchored" data-anchor-id="non-tangible-goods">Non-Tangible Goods</h3>
+<p>Non-tangible goods cannot be stored in the same way and are used within the relevant decision window. Typical examples include:</p>
+<ul>
+<li>education access</li>
+<li>artistic service</li>
+<li>administrative service</li>
+<li>religious service</li>
+<li>prestige consumption</li>
+<li>protection-related service</li>
+<li>housing service</li>
+</ul>
+
+
+</section>
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

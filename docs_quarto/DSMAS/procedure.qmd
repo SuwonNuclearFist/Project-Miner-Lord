@@ -1,0 +1,397 @@
+---
+title: "Procedure"
+html:
+    toc: true
+    toc-depth: 2
+---
+
+# Procedure
+
+DSMAS works through ordered procedures. It does not assume that everything happens at once. This is important for both realism and gameplay clarity.
+
+The full system is divided into three procedural layers:
+
+1. Exchange Clock Procedure
+2. Estate Clock Procedure
+3. Generational Clock Procedure
+
+## Exchange Clock Procedure
+
+The Exchange Clock handles short-run material flow. It turns plans into actual material outcomes.
+
+### 1. Production Tick
+
+Production Tick is where productive plans become realized output. Production is distinct from movement and distinct from use. Seasonal production matters especially for agriculture.
+
+Inputs:
+
+- planned production vector
+- available labor
+- available tangible stock
+- productive asset position
+- capacity utilization plan
+- institutional access
+- local disruption
+- Seasonal State
+- Climate Zone
+
+Outputs:
+
+- realized production
+- used input stock
+- unused capacity
+- production shortfall
+- newly available goods
+
+### 2. Supply Tick
+
+Supply Tick determines where newly available goods are placed before final acquisition and use. Goods are divided among local market stock, warehouse reserve, outbound shipment, and protected minimum stock.
+
+Inputs:
+
+- realized production
+- existing stock
+- warehouse condition
+- planned local supply
+- planned outbound supply
+- merchant capacity
+- route access
+- priority rule
+- minimum stock rule
+- administrative instruction
+
+Outputs:
+
+- local market stock
+- outbound shipment plan
+- warehouse reserve assignment
+- protected minimum stock
+- unallocated goods
+- realized outbound delivery
+- delivery failure
+- route congestion
+
+### 3. Acquisition Tick
+
+Acquisition Tick is where estates attempt to obtain goods that have actually become available. This is not the same as final use. Estates may acquire goods for immediate use, reserve holding, winter preparation, or later household consumption.
+
+Inputs:
+
+- accessible local market stock
+- household stock
+- subsistence allocation
+- reserve allocation
+- target stock
+- expected subsistence pressure
+- expected winter pressure
+- expected availability pressure
+- spending capacity
+- access constraint
+- storage capacity
+
+Outputs:
+
+- realized acquisition
+- household stock inflow
+- failed acquisition
+- acquisition shortfall
+- stock pressure after acquisition
+
+### 4. Use Tick
+
+Use Tick is where estates and local users actually consume or apply goods that are already accessible to them. Goods may be bought now and used later, so acquisition and use must remain distinct.
+
+Inputs:
+
+- household stock
+- realized acquisition
+- subsistence need
+- discretionary allocation
+- Seasonal State
+- Climate Zone
+- housing pressure
+- fuel need
+
+Outputs:
+
+- realized subsistence use
+- realized discretionary use
+- fuel use
+- housing-service use
+- unmet subsistence need
+- unmet discretionary need
+- post-use stock
+
+### 5. Exchange Update Tick
+
+Exchange Update Tick records what happened in the short run and prepares signals for later decisions.
+
+Inputs:
+
+- realized production
+- realized outbound delivery
+- realized acquisition
+- realized use
+- delivery failure
+- unmet need
+- remaining stock
+- unsold stock
+- route congestion
+- warehouse stress
+
+Outputs:
+
+- shortage signal
+- surplus signal
+- delivery instability signal
+- exchange success signal
+- updated carry-over stock
+- signal memory for later expectation formation
+
+## Estate Clock Procedure
+
+The Estate Clock handles estate-level planning and social allocation.
+
+### 1. State Review
+
+Estates first review recent conditions so that decision-making is grounded in experienced reality.
+
+Inputs:
+
+- shortage memory
+- delivery success memory
+- stock pressure
+- household stock
+- known route access
+- estate spending capacity
+- local security
+- administrative reliability
+- Seasonal State
+- Climate Zone
+
+Output:
+
+- estate decision-state summary
+
+### 2. Expectation Formation
+
+Expectation Formation generates simple forecasts based on recent local experience and known access. It is not perfect foresight. It is a practical estimate.
+
+Inputs:
+
+- lagged shortage frequency
+- lagged delivery success
+- lagged stock pressure
+- known route access
+- transport reliability
+- administrative reliability
+- estate spending pressure
+- recent social stress
+- Seasonal State
+- Climate Zone
+- time until next major replenishment
+
+Outputs:
+
+- expected production viability
+- expected trade opportunity
+- expected subsistence pressure
+- expected availability pressure
+- expected winter pressure
+- expected child-investment return
+- expected mobility opportunity
+- target stock
+
+### 3. Joint Estate Allocation
+
+Consumption, fertility, child investment, reserve building, and productive investment should be treated as one broad allocation problem.
+
+The conceptual resource identity is
+
+\[
+Y_t^{e} = C_t^{subs,e} + C_t^{disc,e} + F_t^{e} + I_t^{child,e} + I_t^{prod,e} + R_t^{e}
+\]
+
+where:
+
+- \(C_t^{subs,e}\): subsistence allocation
+- \(C_t^{disc,e}\): discretionary allocation
+- \(F_t^{e}\): fertility-related expenditure
+- \(I_t^{child,e}\): next-generation human capital investment
+- \(I_t^{prod,e}\): productive investment
+- \(R_t^{e}\): reserve allocation
+
+Inputs:
+
+- estate spending capacity
+- expected subsistence pressure
+- expected availability pressure
+- expected winter pressure
+- expected child-investment return
+- expected mobility opportunity
+- institutional constraint
+- demographic composition
+- storage capacity
+- working-capital pressure
+
+Outputs:
+
+- subsistence allocation
+- discretionary allocation
+- fertility allocation
+- child investment allocation
+- productive investment allocation
+- reserve allocation
+
+### 4. Investment Commitment
+
+Estates decide whether to commit resources to future production, building, capacity growth, or local improvement. The commitment is immediate, but realization is delayed.
+
+Inputs:
+
+- productive investment allocation
+- expected production viability
+- road condition
+- construction constraint
+- institutional permission
+- security condition
+- local specialization profile
+- working-capital pressure
+
+Outputs:
+
+- committed productive project
+- committed capital expansion
+- committed construction demand
+- future capacity pipeline
+
+### 5. Transition Preparation
+
+Some choices prepare long-run transformation without changing society instantly.
+
+Inputs:
+
+- fertility allocation
+- child investment allocation
+- child cohort structure
+- institutional access
+- estate barrier
+- estate privilege
+
+Outputs:
+
+- next-generation human capital pipeline
+- future cohort quality indicator
+- future mobility eligibility indicator
+- demographic transition queue
+
+## Generational Clock Procedure
+
+The Generational Clock handles slow social transformation.
+
+### 1. Child Human Capital Realization
+
+Long-run human capital formation is modeled mainly through children.
+
+A conceptual form is
+
+\[
+h_{t+1}^{child,e} = H\left(\frac{I_t^{child,e}}{n_t^{e}}, s_t, a_t, \iota_t\right)
+\]
+
+where:
+
+- \(n_t^{e}\): child cohort size
+- \(s_t\): subsistence and health condition
+- \(a_t\): access condition
+- \(\iota_t\): institutional inclusion
+
+Inputs:
+
+- accumulated child investment
+- child cohort size
+- nutrition condition
+- living-standard condition
+- institutional access
+- estate barrier
+- local stability
+
+Output:
+
+- realized child human capital
+
+### 2. Cohort Replacement
+
+Children later become the next adult layer of society.
+
+Inputs:
+
+- realized child human capital
+- cohort transition queue
+- estate entry rule
+- institutional access
+- local opportunity structure
+
+Outputs:
+
+- new adult cohort entry
+- updated estate composition
+- replacement pressure by estate
+
+### 3. Estate Mobility Realization
+
+Long-run mobility should not be decided instantly in one short-run window.
+
+Inputs:
+
+- mobility eligibility indicator
+- new cohort quality
+- estate barrier
+- estate privilege
+- institutional openness
+- local demand for roles
+
+Outputs:
+
+- promotion realization
+- demotion realization
+- occupational transition realization
+- updated mobility history
+
+### 4. Institutional Transmission
+
+Institutions matter most when they shape repeated access across generations.
+
+Inputs:
+
+- institutional reach
+- administrative continuity
+- educational access
+- political inclusion
+- security stability
+
+Outputs:
+
+- updated institutional access profile
+- updated inclusion pattern
+- updated long-run barrier structure
+
+### 5. Slow Developmental Update
+
+Long-run development should emerge from repeated accumulated change.
+
+Inputs:
+
+- updated estate composition
+- updated human capital profile
+- durable capital stock
+- road quality
+- trade-network depth
+- institutional reach
+- provincial stress history
+
+Outputs:
+
+- updated long-run provincial development
+- updated specialization profile
+- updated long-run social structure

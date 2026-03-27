@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>stock-and-seasonality – Project Miner Lord Design Docs</title>
+<title>Stock and Season – Project Miner Lord Design Docs</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -114,17 +114,155 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#stock-and-season" id="toc-stock-and-season" class="nav-link active" data-scroll-target="#stock-and-season">Stock and Season</a>
+  <ul class="collapse">
+  <li><a href="#why-stock-matters" id="toc-why-stock-matters" class="nav-link" data-scroll-target="#why-stock-matters">Why Stock Matters</a></li>
+  <li><a href="#acquisition-and-use-are-not-the-same" id="toc-acquisition-and-use-are-not-the-same" class="nav-link" data-scroll-target="#acquisition-and-use-are-not-the-same">Acquisition and Use Are Not the Same</a></li>
+  <li><a href="#household-market-and-warehouse-stock" id="toc-household-market-and-warehouse-stock" class="nav-link" data-scroll-target="#household-market-and-warehouse-stock">Household, Market, and Warehouse Stock</a></li>
+  <li><a href="#the-main-constraints-on-stock" id="toc-the-main-constraints-on-stock" class="nav-link" data-scroll-target="#the-main-constraints-on-stock">The Main Constraints on Stock</a>
+  <ul class="collapse">
+  <li><a href="#storage-capacity-constraint" id="toc-storage-capacity-constraint" class="nav-link" data-scroll-target="#storage-capacity-constraint">Storage Capacity Constraint</a></li>
+  <li><a href="#access-constraint" id="toc-access-constraint" class="nav-link" data-scroll-target="#access-constraint">Access Constraint</a></li>
+  <li><a href="#working-capital-lock-up" id="toc-working-capital-lock-up" class="nav-link" data-scroll-target="#working-capital-lock-up">Working-Capital Lock-Up</a></li>
+  </ul></li>
+  <li><a href="#seasonal-demand-spike" id="toc-seasonal-demand-spike" class="nav-link" data-scroll-target="#seasonal-demand-spike">Seasonal Demand Spike</a></li>
+  <li><a href="#seasonal-and-climate-context" id="toc-seasonal-and-climate-context" class="nav-link" data-scroll-target="#seasonal-and-climate-context">Seasonal and Climate Context</a></li>
+  <li><a href="#stock-rules-the-player-can-set" id="toc-stock-rules-the-player-can-set" class="nav-link" data-scroll-target="#stock-rules-the-player-can-set">Stock Rules the Player Can Set</a></li>
+  <li><a href="#why-seasonal-survival-produces-strategy" id="toc-why-seasonal-survival-produces-strategy" class="nav-link" data-scroll-target="#why-seasonal-survival-produces-strategy">Why Seasonal Survival Produces Strategy</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Stock and Season</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
 
 
+</header>
 
+
+<section id="stock-and-season" class="level1">
+<h1>Stock and Season</h1>
+<section id="why-stock-matters" class="level2">
+<h2 class="anchored" data-anchor-id="why-stock-matters">Why Stock Matters</h2>
+<p>In DSMAS, stock management is a central gameplay experience. The player should care deeply about whether a province has enough food, fuel, materials, and reserve stock before winter, war, transport disruption, or local instability.</p>
+<p>The system does not rely mainly on universal depreciation to make stock relevant. Instead, stock matters because of concrete constraints and timing asymmetry.</p>
+</section>
+<section id="acquisition-and-use-are-not-the-same" class="level2">
+<h2 class="anchored" data-anchor-id="acquisition-and-use-are-not-the-same">Acquisition and Use Are Not the Same</h2>
+<p>A core design choice is to separate Acquisition from Use. People may acquire goods now and use them later. This distinction is essential for:</p>
+<ul>
+<li>harvest-season stockpiling</li>
+<li>winter fuel preparation</li>
+<li>food reserve management</li>
+<li>province-level survival gameplay</li>
+</ul>
+<p>Without this distinction, there is no meaningful seasonal survival logic.</p>
+</section>
+<section id="household-market-and-warehouse-stock" class="level2">
+<h2 class="anchored" data-anchor-id="household-market-and-warehouse-stock">Household, Market, and Warehouse Stock</h2>
+<p>DSMAS distinguishes between:</p>
+<ul>
+<li>market stock</li>
+<li>warehouse reserve</li>
+<li>household stock</li>
+</ul>
+<p>Goods in one form do not automatically become usable in another form. A province may be rich in warehouse stock and still expose some estates to shortage if access is weak.</p>
+</section>
+<section id="the-main-constraints-on-stock" class="level2">
+<h2 class="anchored" data-anchor-id="the-main-constraints-on-stock">The Main Constraints on Stock</h2>
+<section id="storage-capacity-constraint" class="level3">
+<h3 class="anchored" data-anchor-id="storage-capacity-constraint">Storage Capacity Constraint</h3>
+<p>Stock does not solve everything because storage is finite. A province or estate may want more reserve but still fail to hold it due to limited storage capacity.</p>
+</section>
+<section id="access-constraint" class="level3">
+<h3 class="anchored" data-anchor-id="access-constraint">Access Constraint</h3>
+<p>The existence of stock does not guarantee practical access. A province may hold reserve but some estates may not reach it. Stock may also be locked behind administrative priority or distribution bottlenecks.</p>
+</section>
+<section id="working-capital-lock-up" class="level3">
+<h3 class="anchored" data-anchor-id="working-capital-lock-up">Working-Capital Lock-Up</h3>
+<p>Reserve building is useful, but it ties up resources. A province that stores too much may become safer but less flexible. This creates a tradeoff between:</p>
+<ul>
+<li>security</li>
+<li>liquidity</li>
+<li>expansion</li>
+<li>trade responsiveness</li>
+</ul>
+</section>
+</section>
+<section id="seasonal-demand-spike" class="level2">
+<h2 class="anchored" data-anchor-id="seasonal-demand-spike">Seasonal Demand Spike</h2>
+<p>Seasonality is one of the central survival mechanisms of the system. Winter should raise demand for:</p>
+<ul>
+<li>food</li>
+<li>fuel</li>
+<li>housing service</li>
+<li>warm clothing</li>
+</ul>
+<p>This is not cosmetic. Seasonal pressure is one of the reasons stock, preparation, and local planning matter.</p>
+</section>
+<section id="seasonal-and-climate-context" class="level2">
+<h2 class="anchored" data-anchor-id="seasonal-and-climate-context">Seasonal and Climate Context</h2>
+<p>Each province has a Climate Zone and a Seasonal State. These modify both production and use, especially:</p>
+<ul>
+<li>subsistence need</li>
+<li>fuel need</li>
+<li>housing pressure</li>
+<li>agricultural opportunity</li>
+<li>target stock</li>
+<li>winter vulnerability</li>
+</ul>
+<p>A simple representation of seasonal subsistence need is:</p>
+<p>[ {c}<em>{g,t,p} = {c}</em>{g}^{0} m_g(<em>p,</em>{p,t}) ]</p>
+<p>This means that baseline need for a good (g) rises or falls depending on where the province is and what season it currently faces.</p>
+</section>
+<section id="stock-rules-the-player-can-set" class="level2">
+<h2 class="anchored" data-anchor-id="stock-rules-the-player-can-set">Stock Rules the Player Can Set</h2>
+<p>The player must be able to directly influence stock behavior through rules such as:</p>
+<ul>
+<li>priority rule</li>
+<li>minimum stock rule</li>
+<li>warehouse reserve target</li>
+<li>protected local reserve</li>
+</ul>
+<p>These are core controls rather than minor convenience options.</p>
+</section>
+<section id="why-seasonal-survival-produces-strategy" class="level2">
+<h2 class="anchored" data-anchor-id="why-seasonal-survival-produces-strategy">Why Seasonal Survival Produces Strategy</h2>
+<p>The strategic challenge is not just producing more. It is producing enough at the right time, moving goods into the right location, preserving reserve, and ensuring access under seasonal stress.</p>
+<p>That is why DSMAS treats stock as a structured problem of:</p>
+<ul>
+<li>timing</li>
+<li>storage</li>
+<li>access</li>
+<li>reserve priority</li>
+<li>local vulnerability</li>
+<li>transport reliability</li>
+</ul>
+<p>The point of the system is that time is uneven, climate is uneven, and survival depends on preparing for that unevenness.</p>
+
+
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

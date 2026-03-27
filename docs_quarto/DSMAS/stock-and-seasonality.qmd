@@ -1,0 +1,114 @@
+---
+title: "Stock and Season"
+html:
+    toc: true
+    toc-depth: 2
+---
+
+# Stock and Season
+
+## Why Stock Matters
+
+In DSMAS, stock management is a central gameplay experience. The player should care deeply about whether a province has enough food, fuel, materials, and reserve stock before winter, war, transport disruption, or local instability.
+
+The system does not rely mainly on universal depreciation to make stock relevant. Instead, stock matters because of concrete constraints and timing asymmetry.
+
+## Acquisition and Use Are Not the Same
+
+A core design choice is to separate Acquisition from Use. People may acquire goods now and use them later. This distinction is essential for:
+
+- harvest-season stockpiling
+- winter fuel preparation
+- food reserve management
+- province-level survival gameplay
+
+Without this distinction, there is no meaningful seasonal survival logic.
+
+## Household, Market, and Warehouse Stock
+
+DSMAS distinguishes between:
+
+- market stock
+- warehouse reserve
+- household stock
+
+Goods in one form do not automatically become usable in another form. A province may be rich in warehouse stock and still expose some estates to shortage if access is weak.
+
+## The Main Constraints on Stock
+
+### Storage Capacity Constraint
+
+Stock does not solve everything because storage is finite. A province or estate may want more reserve but still fail to hold it due to limited storage capacity.
+
+### Access Constraint
+
+The existence of stock does not guarantee practical access. A province may hold reserve but some estates may not reach it. Stock may also be locked behind administrative priority or distribution bottlenecks.
+
+### Working-Capital Lock-Up
+
+Reserve building is useful, but it ties up resources. A province that stores too much may become safer but less flexible. This creates a tradeoff between:
+
+- security
+- liquidity
+- expansion
+- trade responsiveness
+
+## Seasonal Demand Spike
+
+Seasonality is one of the central survival mechanisms of the system. Winter should raise demand for:
+
+- food
+- fuel
+- housing service
+- warm clothing
+
+This is not cosmetic. Seasonal pressure is one of the reasons stock, preparation, and local planning matter.
+
+## Seasonal and Climate Context
+
+Each province has a Climate Zone and a Seasonal State. These modify both production and use, especially:
+
+- subsistence need
+- fuel need
+- housing pressure
+- agricultural opportunity
+- target stock
+- winter vulnerability
+
+A simple representation of seasonal subsistence need is:
+
+\[
+\bar{c}_{g,t,p}
+=
+\bar{c}_{g}^{0}
+\cdot
+m_g(\text{Climate Zone}_p,\text{Seasonal State}_{p,t})
+\]
+
+This means that baseline need for a good \(g\) rises or falls depending on where the province is and what season it currently faces.
+
+## Stock Rules the Player Can Set
+
+The player must be able to directly influence stock behavior through rules such as:
+
+- priority rule
+- minimum stock rule
+- warehouse reserve target
+- protected local reserve
+
+These are core controls rather than minor convenience options.
+
+## Why Seasonal Survival Produces Strategy
+
+The strategic challenge is not just producing more. It is producing enough at the right time, moving goods into the right location, preserving reserve, and ensuring access under seasonal stress.
+
+That is why DSMAS treats stock as a structured problem of:
+
+- timing
+- storage
+- access
+- reserve priority
+- local vulnerability
+- transport reliability
+
+The point of the system is that time is uneven, climate is uneven, and survival depends on preparing for that unevenness.
