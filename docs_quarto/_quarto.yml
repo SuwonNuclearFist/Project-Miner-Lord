@@ -1,0 +1,19 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "Project Miner Lord Design Docs"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: DSMAS/index.qmd
+        text: DSMAS
+      - href: Politics/index.qmd
+        text: Politics
+
+format:
+  html:
+    toc: true
+    theme: cosmo

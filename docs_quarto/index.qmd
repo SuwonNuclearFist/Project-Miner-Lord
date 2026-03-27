@@ -1,0 +1,122 @@
+---
+title: "Project Miner Lord Design Documents"
+format:
+  html:
+    toc: true
+    toc-depth: 2
+---
+
+# Project Miner Lord
+
+Project Miner Lord is a medieval macro-management and political-societal simulation.
+
+This documentation site is organized around two core systems.
+
+- **DSMAS**
+  - the economic and social simulation layer
+  - explains how goods are produced, supplied, acquired, used, stored, and carried across time
+  - explains how seasonality, climate, stock management, and long-run social reproduction shape the realm
+
+- **Politics**
+  - the political and institutional layer
+  - explains how power is distributed, how administration works, how institutions shape opportunity, and why formal law does not always match actual practice
+
+The goal of this documentation is not only to describe isolated mechanics, but to explain how the game is meant to feel.
+
+The player does not manage each household one by one.
+
+Instead, the player governs provinces, shapes institutions, plans roads, designs zoning layouts, organizes trade connections, sets warehouse priorities, influences local specialization, and observes how those decisions gradually transform the visible world.
+
+## What Kind of Game This Is
+
+Project Miner Lord is designed as a game where economic and political change should be visible and interpretable.
+
+The player should experience change through:
+
+- building appearance
+- visible differences in NPC clothing, equipment, and transport
+- changing trade intensity
+- shortage pressure
+- estate rise and decline
+- zoning and land-value pattern
+- demographic change over time
+
+In short, this is a game about ruling a realm whose economy, society, and built environment gradually change in visible ways.
+
+## Documentation Structure
+
+## Core Sections
+
+### DSMAS
+
+The **Dynamic Sequential Market Adjustment Simulation (DSMAS)** is the background system that governs:
+
+- production
+- supply
+- acquisition
+- use
+- stock carry-over
+- shortage
+- fertility
+- next-generation human capital
+- occupational mobility
+- productive investment
+
+It is designed around sequential adjustment rather than instant perfect balance.
+
+[Go to DSMAS](DSMAS/index.qmd)
+
+### Politics
+
+The **Politics** system is the higher-order structure that governs:
+
+- distribution of power
+- administration
+- institutions
+- legitimacy
+- actual practice versus formal rule
+- political constraint on economy and society
+
+It is the main governing layer through which the player shapes the realm.
+
+[Go to Politics](Politics/index.qmd)
+
+## How the Two Systems Connect
+
+These two systems are meant to work together.
+
+- **Politics** determines who can decide, who can enforce, who can access, and who can obstruct.
+- **DSMAS** determines how goods, stock, survival pressure, and long-run social change unfold under those political constraints.
+
+In other words:
+
+- **Politics** shapes the rules, permissions, and frictions.
+- **DSMAS** simulates what happens inside that structure over time.
+
+## Reading Order
+
+A good reading order is:
+
+1. **DSMAS/index.qmd**
+2. **DSMAS/core-system.qmd**
+3. **DSMAS/taxonomy.qmd**
+4. **DSMAS/procedure.qmd**
+5. **DSMAS/stock-and-seasonality.qmd**
+6. **Politics/index.qmd**
+7. **Politics/overview.qmd**
+8. **Politics/distribution-of-power.qmd**
+9. **Politics/administration.qmd**
+10. **Politics/institutions.qmd**
+11. **Politics/legitimacy-and-custom.qmd**
+
+## Design Priority
+
+This documentation emphasizes three priorities:
+
+- depth without tedious micromanagement
+- readable cause and effect
+- visible long-run transformation of the realm
+
+The purpose of the system is not to hide complexity behind spreadsheets.
+
+The purpose is to create a world where governance, storage, trade, climate, institutions, and social reproduction all matter in ways the player can actually see.

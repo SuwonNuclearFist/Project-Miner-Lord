@@ -1,0 +1,292 @@
+---
+title: "DSMAS"
+format:
+  html:
+    toc: true
+    toc-depth: 2
+---
+
+# Dynamic Sequential Market Adjustment Simulation
+
+The **Dynamic Sequential Market Adjustment Simulation (DSMAS)** is the economic and social simulation layer of Project Miner Lord.
+
+It is designed to explain how a province actually lives through production, supply, acquisition, use, storage, shortage, seasonal pressure, and long-run social reproduction.
+
+The purpose of **DSMAS** is not to create a perfectly balanced abstract economy.
+
+Its purpose is to create a world in which economic life feels alive, constrained, and visible to the player.
+
+## What DSMAS Is
+
+**DSMAS** is a sequential simulation.
+
+This means that the world changes step by step rather than all at once.
+
+Goods are produced first, then supplied, then acquired, then used, and then carried over into later periods if they remain in stock.
+
+At the same time, estates make medium-run decisions about reserve building, fertility, child investment, and productive investment.
+
+Over a much longer horizon, those choices affect the next generation, estate mobility, and the long-run development of a province.
+
+In short, **DSMAS** connects three different layers of change:
+
+- short-run material flow
+- medium-run estate planning
+- long-run social transformation
+
+## What DSMAS Is Not
+
+**DSMAS** is not built around one instant, perfect, fully synchronized economic balance.
+
+It does not assume that if a good exists somewhere in the realm, everyone who needs it can automatically use it.
+
+It does not assume that goods instantly move to the right place.
+
+It does not assume that survival pressure, social reproduction, and productive growth all happen at the same speed.
+
+Instead, **DSMAS** is built around delay, access, storage, transport, and uneven adjustment.
+
+That is why stock, shortage, and seasonal pressure are so important.
+
+## Why DSMAS Exists
+
+The main reason for **DSMAS** is to support a kind of gameplay where the player feels like a ruler of provinces rather than an accountant of isolated households.
+
+The player should not have to manually optimize every tiny transaction.
+
+At the same time, the player should still feel that:
+
+- reserve planning matters
+- winter preparation matters
+- route access matters
+- local shortage matters
+- administration matters
+- the next generation matters
+
+This is why the system is designed around province-level management and estate-level aggregation.
+
+## Core Design Idea
+
+The core idea of **DSMAS** is simple:
+
+- people and estates react to what recently happened
+- production does not automatically guarantee usable access
+- stock can protect a province, but only up to a point
+- climate and season change what people need
+- long-run social change happens through child development and cohort replacement
+- politics shapes the constraints under which all of this happens
+
+This means the system is not mainly about finding one perfect price or one perfect formula.
+
+It is about understanding how different pressures accumulate and interact over time.
+
+## Why Sequential Adjustment Matters
+
+Sequential adjustment is central because it makes the world readable.
+
+If everything were solved all at once, many of the most important gameplay experiences would disappear.
+
+For example:
+
+- a province could not visibly fail to prepare for winter
+- storage decisions would matter less
+- transport bottlenecks would be weaker
+- local reserve rules would be less meaningful
+- politics would have fewer visible channels through which to distort or improve outcomes
+
+By contrast, when the world adjusts in sequence, the player can see where the problem came from.
+
+A problem may come from:
+
+- weak production
+- poor supply allocation
+- failed delivery
+- limited stock access
+- weak reserve policy
+- long-run developmental weakness
+
+This is important both for immersion and for player learning.
+
+## Why Stock Management Is Central
+
+Stock management is one of the core player experiences in **DSMAS**.
+
+This is intentional.
+
+A province should not feel safe merely because it produced well once.
+
+It should feel safe because it has enough accessible reserve to survive later pressure.
+
+This is especially important under:
+
+- winter demand spike
+- harvest seasonality
+- route disruption
+- war or insecurity
+- local administrative failure
+
+In **DSMAS**, stock matters because time is uneven.
+
+Some goods are produced only in certain periods.
+
+Some goods are needed more urgently in certain seasons.
+
+Some provinces are harder to reach than others.
+
+That is why reserve building, minimum stock rules, and storage priorities are not secondary features.
+
+They are part of the core simulation.
+
+## Why Stock Does Not Solve Everything
+
+Although stock is central, it is not meant to solve every problem automatically.
+
+If stock were unlimited and universally accessible, many interesting pressures would disappear.
+
+For this reason, **DSMAS** relies on several constraints:
+
+- **Storage Capacity Constraint**
+- **Access Constraint**
+- **Working-Capital Lock-Up**
+- **Seasonal Demand Spike**
+- **Storage Priority Rule**
+- **Minimum Stock Rule**
+
+These make stock powerful but not all-powerful.
+
+A province may have goods in storage and still suffer stress if:
+
+- the reserve is too small
+- the reserve is hard to access
+- too much working capital is tied up
+- winter demand rises sharply
+- distribution within the province is unequal
+- politics or administration blocks actual use
+
+## Why Seasonality and Climate Matter
+
+Seasonality is not just decoration in **DSMAS**.
+
+It changes both production and need.
+
+Agriculture is seasonal.
+
+Fuel demand is seasonal.
+
+Housing pressure is seasonal.
+
+Basic survival requirement can also vary by climate and time of year.
+
+This is why **DSMAS** treats **Climate Zone** and **Seasonal State** as meaningful background conditions.
+
+A colder province should not feel identical to a warmer one.
+
+A province approaching winter should not make the same decisions as a province approaching harvest.
+
+This makes the world more legible, more strategic, and more grounded.
+
+## Why Acquisition and Use Are Separate
+
+One important design choice in **DSMAS** is the separation between **Acquisition** and **Use**.
+
+This means that buying or obtaining a good is not the same thing as consuming it immediately.
+
+This matters because people often need to acquire goods before they need to use them.
+
+Examples include:
+
+- grain after harvest
+- fuel before winter
+- reserve clothing for cold seasons
+- strategic reserve for local instability
+
+This distinction helps the system represent stockpiling, winter preparation, and delayed survival pressure in a more natural way.
+
+## Why Next-Generation Human Capital Matters
+
+Long-run social change in **DSMAS** is driven mainly through the next generation.
+
+The system does not focus mainly on adult self-improvement.
+
+Instead, it focuses on:
+
+- child support
+- child education
+- nutrition and stability
+- institutional access
+- cohort replacement
+
+This approach fits the intended historical atmosphere better and also makes political and social reform more meaningful.
+
+A realm is changed not only by surviving the next shortage, but by shaping what kind of adults the next generation becomes.
+
+## Main Building Blocks of DSMAS
+
+The **DSMAS** documentation is divided into four main parts.
+
+### 1. Core System
+
+This explains the design philosophy and overall logic of the system.
+
+[Go to Core System](core-system.qmd)
+
+### 2. Taxonomy
+
+This defines the main units, variables, clocks, and categories used in the system.
+
+[Go to Taxonomy](taxonomy.qmd)
+
+### 3. Procedure
+
+This explains the actual sequence of procedures that drive the simulation.
+
+[Go to Procedure](procedure.qmd)
+
+### 4. Stock and Seasonality
+
+This explains stock management, climate pressure, acquisition versus use, winter survival logic, and related mechanics.
+
+[Go to Stock and Seasonality](stock-and-seasonality.qmd)
+
+## How DSMAS Connects to Politics
+
+**DSMAS** is not isolated from the **Politics** system.
+
+Politics determines the higher-order conditions under which economic life unfolds.
+
+Politics affects things such as:
+
+- who has authority
+- who can enforce rules
+- who can access reserve
+- how strongly routes are protected
+- whether local administration is effective
+- how institutions shape mobility and opportunity
+
+In this sense:
+
+- **Politics** defines the constraint structure
+- **DSMAS** simulates what happens inside that structure over time
+
+## Reading Guide
+
+A good reading order for the **DSMAS** section is:
+
+1. **core-system.qmd**
+2. **taxonomy.qmd**
+3. **procedure.qmd**
+4. **stock-and-seasonality.qmd**
+
+## Summary
+
+The main purpose of **DSMAS** is to create an economy that is:
+
+- understandable
+- visible
+- strategically meaningful
+- low in tedious micromanagement
+- rich in long-run consequence
+
+It is not meant to feel like a hidden spreadsheet.
+
+It is meant to feel like a living provincial world in which production, stock, season, access, and social reproduction all matter in ways the player can actually see.
